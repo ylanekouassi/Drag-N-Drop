@@ -14,6 +14,15 @@ for(item of lists){
             rightTable.append(selected);
             selected = null;
         })
+
+        leftTable.addEventListener("dragover", function(e){
+            e.preventDefault();
+        });
+        leftTable.addEventListener("drop", function(e){
+            if(selected !== null)
+            leftTable.append(selected);
+            selected = null;
+        })
     })
 
 
